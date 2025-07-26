@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Irrigation Advisor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Irrigation Advisor</h1>
+
+    <!-- Use action="/save-crop" to match Flask route -->
+    <form id="form" method="POST" action="/save-crop">
+      
+      <!-- 🌾 Crop Type -->
+      <label for="crop">🌾 Crop Type:</label>
+      <select name="crop" id="crop" required>
+        <option value="">--Select Crop--</option>
+        <option value="wheat">Wheat</option>
+        <option value="potato">Potato</option>
+        <option value="tomato">Tomato</option>
+        <option value="carrot">Carrot</option>
+        <option value="chilli">Chilli</option>
+      </select>
+
+      <!-- 🌱 Seedling Stage -->
+      <label for="stage">🌱 Seedling Stage:</label>
+      <select name="stage" id="stage" required>
+        <option value="">--Select Stage--</option>
+        <option value="Germination">Germination</option>
+        <option value="Seedling Stage">Seedling Stage</option>
+        <option value="Vegetative Growth / Root or Tuber Development">Vegetative Growth / Root or Tuber Development</option>
+        <option value="Flowering">Flowering</option>
+        <option value="Pollination">Pollination</option>
+        <option value="Fruit/Grain/Bulb Formation">Fruit/Grain/Bulb Formation</option>
+        <option value="Maturation">Maturation</option>
+        <option value="Harvest">Harvest</option>
+      </select>
+
+      <!-- 🌍 Soil Type -->
+      <label for="soil">🌍 Soil Type:</label>
+      <select name="soil" id="soil" required>
+        <option value="">--Select Soil--</option>
+        <option value="Black Soil">Black Soil</option>
+        <option value="Alluvial Soil">Alluvial Soil</option>
+        <option value="Sandy Soil">Sandy Soil</option>
+        <option value="Red Soil">Red Soil</option>
+        <option value="Clay Soil">Clay Soil</option>
+        <option value="Loam Soil">Loam Soil</option>
+        <option value="Chalky Soil">Chalky Soil</option>
+      </select>
+
+      <button type="submit">Save Crop Details</button>
+    </form>
+  </div>
+</body>
+</html>

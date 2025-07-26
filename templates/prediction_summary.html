@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Summary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 500px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #00796b;
+      margin-bottom: 25px;
+    }
+
+    .summary {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .summary strong {
+      color: #000;
+    }
+
+    .result-box {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #e6ffe6;
+      border-left: 6px solid #28a745;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #155724;
+    }
+
+    .back-btn {
+      margin-top: 25px;
+      display: inline-block;
+      text-align: center;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🌿 Prediction Summary</h2>
+    <div class="summary">
+      <p><strong>Crop:</strong> {{ crop }}</p>
+      <p><strong>Stage:</strong> {{ stage }}</p>
+      <p><strong>Soil:</strong> {{ soil }}</p>
+      <p><strong>Temperature:</strong> {{ temperature }} °C</p>
+      <p><strong>Moisture:</strong> {{ moisture }} %</p>
+    </div>
+
+    <div class="result-box">
+      {{ recommendation }}
+    </div>
+
+    <div style="text-align: center;">
+      <a href="/" class="back-btn">Go Home</a>
+    </div>
+  </div>
+</body>
+</html>
